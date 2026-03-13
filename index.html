@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CV - Mo'men Sarsour</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Projects Section Custom Styles -->
+  <style>
+    /* ===== PORTFOLIO FILTER ===== */
+    #portfolio-flters {
+      padding: 0;
+      margin: 0 auto 35px auto;
+      list-style: none;
+      text-align: center;
+    }
+    #portfolio-flters li {
+      display: inline-block;
+      margin: 0 6px 10px 6px;
+      padding: 8px 22px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      cursor: pointer;
+      border: 2px solid #0563bb;
+      color: #0563bb;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+    #portfolio-flters li:hover,
+    #portfolio-flters li.filter-active {
+      background: #0563bb;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(5, 99, 187, 0.35);
+    }
+
+    /* ===== PCARD ===== */
+    .pcard {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 24px 22px;
+      margin-bottom: 25px;
+      height: 100%;
+      min-height: 270px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #e8edf3;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .pcard::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0563bb, #0892d0);
+      border-radius: 12px 12px 0 0;
+    }
+    .pcard:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(5, 99, 187, 0.18);
+    }
+
+    /* Badge */
+    .pcard-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #0563bb;
+      background: rgba(5, 99, 187, 0.08);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    /* Icon */
+    .pcard-icon {
+      font-size: 32px;
+      color: #0563bb;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    /* Title */
+    .pcard-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #173b6c;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    /* Description */
+    .pcard-desc {
+      font-size: 13.5px;
+      color: #666;
+      line-height: 1.65;
+      flex-grow: 1;
+      margin-bottom: 18px;
+    }
+
+    /* Footer / Button */
+    .pcard-footer {
+      margin-top: auto;
+    }
+    .pcard-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #0563bb;
+      border: 1.5px solid #0563bb;
+      padding: 7px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .pcard-btn:hover {
+      background: #0563bb;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* View All Button */
+    .pcard-view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0563bb;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 38px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 18px rgba(5, 99, 187, 0.3);
+    }
+    .pcard-view-all:hover {
+      background: #0452a3;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(5, 99, 187, 0.4);
+      text-decoration: none;
+    }
+
+    /* Hidden items (filter) */
+    .portfolio-item.hidden {
+      display: none;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/POP.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Mo'men Sarsour</a></h1>
+        <p class="text-light">Full Stack Developer</p>
+        <div class="social-links mt-3 text-center">
+          <a href="https://wa.me/+970567077179" target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="mailto:momensarsour5@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
+          <a href="https://github.com/momen9sarsour" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#particles-js" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class='bx bxs-certification'></i> <span>Skills</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="particles-js" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Mo'men Sarsour</h1>
+      <p>I'm <span class="typed" data-typed-items="Full Stack Developer, Back-End Developer, Web Designer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Profile</h2>
+          <p>
+            A passionate Computer Systems Engineer with solid hands-on experience in Full Stack Development,
+            specializing in Back-End technologies using PHP and the Laravel framework.
+            I have successfully completed intensive training programs in JAVA, C++, and Full Stack Development,
+            which built a strong technical foundation and a sharp problem-solving mindset.
+            I continuously strive to grow professionally — transforming creative ideas into real-world digital solutions
+            and delivering high-quality, scalable web applications that meet business needs.
+            I thrive in collaborative environments and take pride in writing clean, efficient, and well-structured code.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/DSC_0008.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3 class="mb-5">Computer Systems Engineer &amp; Full Stack Developer.</h3>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Computer Systems Engineering</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+970567077179</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Dair Al Balah, Gaza, Palestine</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>College:</strong> <span>Palestine Technical College</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>momensarsour5@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="pdf">
+              <button class="custom-btn btn-7">
+                <span>
+                  <a href="assets/img/MomenSarsour.ComputerSystemEngineer.CV.pdf" download>Preview CV</a>
+                </span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Courses Completed</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Years Experience</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">PHP & Laravel <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">HTML & CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Database Management (MySQL) <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Back-End Development <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">Full Stack Development <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JAVA Programming <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">C++ Programming <i class="val">70%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Version Control (Git) <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Web Design & Front-End Basics <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Computer Systems Engineering - Palestine Technical College</h4>
+              <h5>2019 - 2024</h5>
+            </div>
+
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Full Stack Developer - Centroware Company</h4>
+              <h5>2021 - 2024</h5>
+              <ul>
+                <li>
+                  Designed and developed professional web applications by transforming creative ideas into
+                  fully functional digital solutions. Key projects delivered:
+                  (1) A multi-vendor marketplace platform where each store is independently managed by its
+                  own admin, with full control over categories, products, profit-sharing with the main admin,
+                  region-based delivery service fees, and integrated electronic payment via payment gateways.
+                  (2) A comprehensive e-commerce store with categorized product listings, secure payment
+                  gateway integration, and dual-level control for both admin and buyers.
+                </li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Data Manager - Maximus Foundation Al-Hofuf</h4>
+              <h5>2020 - 2023</h5>
+              <ul>
+                <li>
+                  Managed and entered data for the foundation's clients and beneficiaries with high accuracy.
+                  Responsibilities included collecting and inputting data into the official system,
+                  creating professional CVs for beneficiaries, resolving operational challenges,
+                  and playing a key role in analyzing, classifying, and organizing beneficiary data
+                  based on specific cases to ensure optimized data management processes.
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <h3 class="resume-title">Courses & Certifications</h3>
+
+            <div class="resume-item">
+              <h4>Website Design and Programming Course "Full Stack"</h4>
+              <h5>17-12-2022 — Al-Nawa Cultural Center</h5>
+              <ul>
+                <li>Comprehensive full stack web development covering front-end and back-end using PHP & Laravel framework.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Soft Skills Development Course</h4>
+              <h5>13/05/2022 — Al-Nawa Cultural Center</h5>
+              <ul>
+                <li>Developed essential professional communication and interpersonal skills for the workplace.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Conflict and Conflict Management at Work</h4>
+              <h5>20/4/2021 — Arab Gulf Union for Development and Training</h5>
+              <ul>
+                <li>Learned effective strategies for managing and resolving workplace conflicts professionally.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Creative Solutions in Problem Solving</h4>
+              <h5>28/3/2021 — Arab Unity Electronic Academy</h5>
+              <ul>
+                <li>Mastered creative analytical thinking and innovative problem-solving methodologies.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Team Work and Collaboration Course</h4>
+              <h5>10/02/2021 — The Palestinian Center for Supporting Students</h5>
+              <ul>
+                <li>Enhanced teamwork, communication, and collaborative project management skills.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Project Management Course</h4>
+              <h5>28/3/2021 — Arab Unity Electronic Academy</h5>
+              <ul>
+                <li>Acquired project planning, execution, monitoring, and management methodologies.</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Reference</h3>
+            <div class="resume-item">
+              <h4>Ali Haffez Khattb</h4>
+              <h5>Company Manager — Foxes Marketing</h5>
+              <ul>
+                <li><strong>Phone:</strong> +972 59-234-1364</li>
+                <li><strong>Email:</strong> alikh2011@gmail.com</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+<!-- ======= Portfolio/Projects Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>A selection of my real-world projects built with modern web technologies. Each project reflects my passion for building practical, scalable, and professional digital solutions.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters" style="list-style:none; padding:0; margin:0 0 35px 0; display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
+              <li data-filter="*" class="pf-active" onclick="filterProjects(this,'*')" style="cursor:pointer; padding:8px 22px; border-radius:50px; background:#0563bb; color:#fff; font-size:14px; font-weight:600; transition:all 0.3s; border:2px solid #0563bb;">All</li>
+              <li data-filter=".filter-laravel" onclick="filterProjects(this,'.filter-laravel')" style="cursor:pointer; padding:8px 22px; border-radius:50px; background:#fff; color:#0563bb; font-size:14px; font-weight:600; transition:all 0.3s; border:2px solid #0563bb;">Laravel / PHP</li>
+              <li data-filter=".filter-web" onclick="filterProjects(this,'.filter-web')" style="cursor:pointer; padding:8px 22px; border-radius:50px; background:#fff; color:#0563bb; font-size:14px; font-weight:600; transition:all 0.3s; border:2px solid #0563bb;">Web</li>
+              <li data-filter=".filter-java" onclick="filterProjects(this,'.filter-java')" style="cursor:pointer; padding:8px 22px; border-radius:50px; background:#fff; color:#0563bb; font-size:14px; font-weight:600; transition:all 0.3s; border:2px solid #0563bb;">Java / Flutter</li>
+              <li data-filter=".filter-cpp" onclick="filterProjects(this,'.filter-cpp')" style="cursor:pointer; padding:8px 22px; border-radius:50px; background:#fff; color:#0563bb; font-size:14px; font-weight:600; transition:all 0.3s; border:2px solid #0563bb;">C++</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="row portfolio-container" id="portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <!-- Project: Personal Website -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#0563bb,#034a8a); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxl-laravel"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Personal Website</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Laravel</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">TailwindCSS</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Breeze</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">Personal portfolio website built using Laravel, Breeze authentication, and TailwindCSS with a modern fully responsive design.</p>
+                <a href="https://github.com/Momen9Sarsour/Personal-Website" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Hotel Room Booking -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#1a73e8,#0d47a1); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-hotel"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Hotel Room Booking System</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">PHP</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Laravel</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">MySQL</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A complete hotel room reservation system featuring admin panel, room management, availability control, and full booking workflows.</p>
+                <a href="https://github.com/Momen9Sarsour/Hotel-Room-Booking-System" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Multi-Store -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-laravel" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#00897b,#00574b); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-store"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Multi-Store E-Commerce Platform</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Laravel</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Blade</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Payment Gateway</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A multi-vendor e-commerce system where each store has its own admin, categories, products, profit-sharing, region-based delivery, and integrated payment gateway.</p>
+                <a href="https://github.com/Momen9Sarsour/multi-store-me" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Power Electronics -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#7b1fa2,#4a0072); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-flask"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Power Electronics Virtual Laboratory</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">HTML</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">CSS</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">JavaScript</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Bootstrap</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">An interactive virtual laboratory for Power Electronics experiments, enabling students to simulate and explore electrical concepts online.</p>
+                <a href="https://github.com/Momen9Sarsour/Power-Electronics-Virtual-Laboratory" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Student Course Registration -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#f57c00,#bf360c); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-graduation"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Student Course Registration System</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">PHP</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">JavaScript</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Bootstrap</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A full student course registration system with enrollment management, built using HTML, CSS, JavaScript, Bootstrap, and PHP backend.</p>
+                <a href="https://github.com/Momen9Sarsour/Student-Course-Registration-System-PHP" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Weather App -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#0288d1,#01579b); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bx-cloud"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Weather Forecast App</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">JavaScript</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Ajax</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Bootstrap</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A dynamic weather forecast application that fetches real-time weather data using Ajax and a public API, with a clean and responsive interface.</p>
+                <a href="https://github.com/Momen9Sarsour/Weather-Forecast-App-Using-Ajax" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Foxes Marketing -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#e65100,#b71c1c); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-briefcase"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Foxes Marketing Portfolio Website</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">HTML</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">CSS</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">JavaScript</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A professional business portfolio website designed for Foxes Marketing company with modern animations, smooth scrolling, and a fully responsive layout.</p>
+                <a href="https://github.com/Momen9Sarsour/Foxes-Marketing-Portfolio-Website" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: TerraPalestina -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#2e7d32,#1b5e20); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-map"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">TerraPalestina Travel App</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Flutter</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Dart</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Java</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A mobile travel application for Palestine built with Flutter and Java, showcasing Palestinian tourist destinations and preserving cultural heritage digitally.</p>
+                <a href="https://github.com/Momen9Sarsour/Flutter-TerraPalestina-Travel-App" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Library Management -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-java" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#6a1b9a,#4a148c); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-book"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Library Management System</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Java</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Oracle DB</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Swing</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">A desktop Library Management System built with Java Swing and Oracle Database, supporting full CRUD operations for books, members, and borrowing records.</p>
+                <a href="https://github.com/Momen9Sarsour/Java-Library-Management-System-Swing-Oracle-DB-" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project: Car Avoidance Game C++ -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-cpp" style="margin-bottom:30px;">
+            <div style="background:#fff; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.08); overflow:hidden; height:100%; display:flex; flex-direction:column; transition:transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)';">
+              <div style="background:linear-gradient(135deg,#37474f,#102027); padding:22px 22px 18px; position:relative;">
+                <div style="position:absolute;top:15px;right:15px; font-size:28px; color:rgba(255,255,255,0.2);"><i class="bx bxs-joystick"></i></div>
+                <h4 style="color:#fff; font-size:16px; font-weight:700; margin:0 0 6px 0;">Car Avoidance Game</h4>
+                <div style="display:flex; flex-wrap:wrap; gap:5px; margin-top:8px;">
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">C++</span>
+                  <span style="background:rgba(255,255,255,0.2); color:#fff; padding:2px 10px; border-radius:20px; font-size:11px;">Visual Studio</span>
+                </div>
+              </div>
+              <div style="padding:18px 22px; flex:1; display:flex; flex-direction:column;">
+                <p style="color:#666; font-size:13px; line-height:1.7; flex:1; margin:0 0 18px 0;">An interactive car avoidance game developed using C++ and Visual Studio, showcasing object-oriented programming skills and game logic implementation.</p>
+                <a href="https://github.com/Momen9Sarsour/Car-Avoidance-Game" target="_blank" style="display:inline-flex; align-items:center; gap:6px; background:#0563bb; color:#fff; padding:8px 18px; border-radius:6px; font-size:13px; text-decoration:none; font-weight:600; width:fit-content;"><i class="bx bxl-github" style="font-size:16px;"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center" data-aos="fade-up" style="margin-top:10px; padding-bottom:10px;">
+          <a href="https://github.com/Momen9Sarsour?tab=repositories" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#0563bb; color:#fff; padding:13px 38px; border-radius:8px; font-size:15px; text-decoration:none; font-weight:700; box-shadow:0 4px 15px rgba(5,99,187,0.4); transition:all 0.3s;" onmouseover="this.style.background='#034a8a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#0563bb';this.style.transform='translateY(0)';">
+            <i class="bx bxl-github" style="font-size:20px;"></i> View All Projects on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>1236 Dair Al Balah St., Gaza, Palestine</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>momensarsour5@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+970567077179</p>
+              </div>
+
+              <iframe width="100%" height="50%" id="gmap_canvas" src="https://maps.google.com/maps?q=Deir+al-Balah,+Gaza&t=k&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center">
+                <button type="submit" onclick="sendEmail(event)">Send Message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Mo'men Sarsour</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="index.html">Mo'men Sarsour</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- loading -->
+  <div class="loading" id="loading">
+    <div class="sk-circle">
+      <div class="sk-circle1 sk-child"></div>
+      <div class="sk-circle2 sk-child"></div>
+      <div class="sk-circle3 sk-child"></div>
+      <div class="sk-circle4 sk-child"></div>
+      <div class="sk-circle5 sk-child"></div>
+      <div class="sk-circle6 sk-child"></div>
+      <div class="sk-circle7 sk-child"></div>
+      <div class="sk-circle8 sk-child"></div>
+      <div class="sk-circle9 sk-child"></div>
+      <div class="sk-circle10 sk-child"></div>
+      <div class="sk-circle11 sk-child"></div>
+      <div class="sk-circle12 sk-child"></div>
+    </div>
+  </div>
+
+<!-- Vendor JS Files -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      var name    = document.getElementById("name").value;
+      var email   = document.getElementById("email").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+      var mailtoLink = "mailto:momensarsour5@gmail.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body="    + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+      window.location.href = mailtoLink;
+    }
+  </script>
+
+  <script>
+    // ============================================
+    //  PORTFOLIO FILTER
+    // ============================================
+    function filterProjects(btn, filter) {
+      // 1. Reset all filter buttons
+      document.querySelectorAll("#portfolio-flters li").forEach(function(el) {
+        el.style.background = "#fff";
+        el.style.color = "#0563bb";
+      });
+      // 2. Highlight active button
+      btn.style.background = "#0563bb";
+      btn.style.color = "#fff";
+
+      // 3. Animate show/hide cards
+      var items = document.querySelectorAll(".portfolio-item");
+      items.forEach(function(item) {
+        var match = filter === "*" || item.classList.contains(filter.replace(".", ""));
+        if (match) {
+          item.style.display = "flex";
+          item.style.opacity = "0";
+          item.style.transform = "translateY(20px)";
+          void item.offsetWidth; // force reflow
+          item.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+          item.style.opacity = "1";
+          item.style.transform = "translateY(0)";
+        } else {
+          item.style.transition = "opacity 0.25s ease";
+          item.style.opacity = "0";
+          setTimeout(function(el) {
+            return function() { el.style.display = "none"; };
+          }(item), 250);
+        }
+      });
+    }
+
+
+    // ============================================
+    //  SCROLL EVENTS
+    // ============================================
+    window.addEventListener("scroll", function() {
+
+      // --- Navbar active link highlight ---
+      var sections  = document.querySelectorAll("section[id], #particles-js");
+      var navLinks  = document.querySelectorAll(".nav-menu a");
+      var scrollPos = window.scrollY + 200;
+      sections.forEach(function(section) {
+        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+          navLinks.forEach(function(link) {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + section.id) {
+              link.classList.add("active");
+            }
+          });
+        }
+      });
+
+      // --- Back to top button visibility ---
+      var backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        backToTop.classList.toggle("active", window.scrollY > 100);
+      }
+
+    });
+
+    // --- Back to top click ---
+    document.addEventListener("DOMContentLoaded", function() {
+      var backToTop = document.querySelector(".back-to-top");
+      if (backToTop) {
+        backToTop.addEventListener("click", function(e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    });
+
+    // ============================================
+    //  SKILL PROGRESS BARS — animate on scroll
+    // ============================================
+    window.addEventListener("scroll", function animateSkills() {
+      var skillsSection = document.getElementById("skills");
+      if (!skillsSection) return;
+      if (skillsSection.getBoundingClientRect().top < window.innerHeight - 100) {
+        document.querySelectorAll(".progress-bar").forEach(function(bar) {
+          bar.style.transition = "width 1.2s ease";
+          bar.style.width = bar.getAttribute("aria-valuenow") + "%";
+        });
+        window.removeEventListener("scroll", animateSkills);
+      }
+    });
+
+    // ============================================
+    //  HIDE LOADING SPINNER
+    // ============================================
+    window.addEventListener("load", function() {
+      var loading = document.getElementById("loading");
+      if (loading) loading.style.display = "none";
+    });
+
+  </script>
+
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
